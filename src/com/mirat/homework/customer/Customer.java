@@ -83,10 +83,10 @@ public class Customer {
         return id == customer.id &&
                 cardNumber == customer.cardNumber &&
                 accountNumber == customer.accountNumber &&
-                lastName.equals(customer.lastName) &&
-                firstName.equals(customer.firstName) &&
-                middleName.equals(customer.middleName) &&
-                address.equals(customer.address);
+                Objects.equals(lastName, customer.lastName) &&
+                Objects.equals(firstName, customer.firstName) &&
+                Objects.equals(middleName, customer.middleName) &&
+                Objects.equals(address, customer.address);
     }
 
     @Override

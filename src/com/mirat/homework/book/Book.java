@@ -93,10 +93,10 @@ public class Book {
                 year == book.year &&
                 pages == book.pages &&
                 price == book.price &&
-                name.equals(book.name) &&
-                author.equals(book.author) &&
-                publishingHouse.equals(book.publishingHouse) &&
-                typeOfBinding.equals(book.typeOfBinding);
+                Objects.equals(name, book.name) &&
+                Objects.equals(author, book.author) &&
+                Objects.equals(publishingHouse, book.publishingHouse) &&
+                Objects.equals(typeOfBinding, book.typeOfBinding);
     }
 
     @Override

@@ -67,10 +67,10 @@ public class Airline {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Airline airline = (Airline) o;
-        return destination.equals(airline.destination) &&
-                flight.equals(airline.flight) &&
-                plane.equals(airline.plane) &&
-                departureTime.equals(airline.departureTime) &&
+        return Objects.equals(destination, airline.destination) &&
+                Objects.equals(flight, airline.flight) &&
+                Objects.equals(plane, airline.plane) &&
+                Objects.equals(departureTime, airline.departureTime) &&
                 Arrays.equals(weekDays, airline.weekDays);
     }
 
